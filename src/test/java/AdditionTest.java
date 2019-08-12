@@ -14,4 +14,13 @@ public class AdditionTest {
 
         assertEquals(anyFraction, additionResult);
     }
+
+    @Test
+    public void neutral_element_added_to_itself_should_return_itself() {
+        Fraction neutralElement = new Fraction(0);
+
+        Fraction additionResult = neutralElement.add(neutralElement);
+
+        assertEquals(neutralElement, additionResult);
+    }
 }
