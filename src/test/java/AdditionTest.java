@@ -6,12 +6,10 @@ import static org.junit.Assert.*;
 public class AdditionTest {
 
     @Test
-    public void neutral_element() {
+    public void neutral_element_added_to_any_fraction_should_return_this_fraction() {
         Fraction anyFraction = new Fraction(1);
         Fraction neutralElement = new Fraction(0);
 
         assertEquals(anyFraction, anyFraction.add(neutralElement));
     }
-
-
 }
