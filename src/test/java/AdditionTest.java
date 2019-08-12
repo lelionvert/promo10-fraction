@@ -7,9 +7,11 @@ public class AdditionTest {
 
     @Test
     public void neutral_element() {
-        Fraction base = new Fraction(1);
+        Fraction anyFraction = new Fraction(1);
         Fraction neutralElement = new Fraction(0);
 
-        assertEquals(base, base.add(neutralElement));
+        assertEquals(anyFraction, anyFraction.add(neutralElement));
     }
+
+
 }
