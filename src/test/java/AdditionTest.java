@@ -1,6 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.concurrent.LinkedBlockingDeque;
+
 import static org.junit.Assert.*;
 
 public class AdditionTest {
@@ -22,5 +24,15 @@ public class AdditionTest {
         Fraction additionResult = neutralElement.add(neutralElement);
 
         assertEquals(neutralElement, additionResult);
+    }
+
+    @Test
+    public void anyFraction_added_to_neutral_element_should_return_anyFraction() {
+        Fraction neutralElement = new Fraction(0);
+        Fraction anyFraction = new Fraction(1);
+
+        Fraction additionResult = neutralElement.add(anyFraction);
+
+        assertEquals(anyFraction, additionResult);
     }
 }
