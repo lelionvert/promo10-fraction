@@ -10,6 +10,8 @@ public class AdditionTest {
         Fraction anyFraction = new Fraction(1);
         Fraction neutralElement = new Fraction(0);
 
-        assertEquals(anyFraction, anyFraction.add(neutralElement));
+        Fraction additionResult = anyFraction.add(neutralElement);
+
+        assertEquals(anyFraction, additionResult);
     }
 }
