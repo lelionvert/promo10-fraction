@@ -1,16 +1,13 @@
-import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.concurrent.LinkedBlockingDeque;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class AdditionTest {
 
     @Test
-    public void neutral_element_added_to_any_fraction_should_return_this_fraction() {
+    public void add_neutral_element_to_any_fraction_should_return_this_fraction() {
         Fraction anyFraction = new Fraction(1);
-        Fraction neutralElement = new Fraction(0);
+        Fraction neutralElement = new Fraction(Fraction.NEUTRAL_ELEMENT);
 
         Fraction additionResult = anyFraction.add(neutralElement);
 
@@ -19,7 +16,7 @@ public class AdditionTest {
 
     @Test
     public void neutral_element_added_to_itself_should_return_itself() {
-        Fraction neutralElement = new Fraction(0);
+        Fraction neutralElement = new Fraction(Fraction.NEUTRAL_ELEMENT);
 
         Fraction additionResult = neutralElement.add(neutralElement);
 
@@ -27,8 +24,8 @@ public class AdditionTest {
     }
 
     @Test
-    public void anyFraction_added_to_neutral_element_should_return_anyFraction() {
-        Fraction neutralElement = new Fraction(0);
+    public void add_anyFraction_to_neutral_element_should_return_anyFraction() {
+        Fraction neutralElement = new Fraction(Fraction.NEUTRAL_ELEMENT);
         Fraction anyFraction = new Fraction(1);
 
         Fraction additionResult = neutralElement.add(anyFraction);
