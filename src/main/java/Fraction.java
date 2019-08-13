@@ -12,7 +12,7 @@ public class Fraction {
         if (NEUTRAL_ELEMENT == other.numerator) {
             return this;
         }
-        return other;
+        return new Fraction(this.numerator + other.numerator);
     }
 
     @Override
