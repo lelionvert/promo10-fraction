@@ -41,8 +41,10 @@ public class AdditionTest {
     }
 
     @Test
-    public void commutativity_of_addition() {
-        assertTrue(Fraction.of(1).add(Fraction.of(2))
-                .equals(Fraction.of(2).add(Fraction.of(1))));
+    public void add_should_be_commutative() {
+        Fraction BAddedToA = Fraction.of(1).add(Fraction.of(2));
+        Fraction AAddedToB = Fraction.of(2).add(Fraction.of(1));
+
+        assertTrue(BAddedToA.equals(AAddedToB));
     }
 }
