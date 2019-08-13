@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Fraction {
-    public static final int NEUTRAL_ELEMENT = 0;
+    private static final int ZERO = 0;
     private final int numerator;
 
     public Fraction(int numerator) {
@@ -9,13 +9,10 @@ public class Fraction {
     }
 
     public static Fraction zero() {
-        return new Fraction(NEUTRAL_ELEMENT);
+        return new Fraction(ZERO);
     }
 
     public Fraction add(Fraction other) {
-        if (NEUTRAL_ELEMENT == other.numerator) {
-            return this;
-        }
         return new Fraction(this.numerator + other.numerator);
     }
 
