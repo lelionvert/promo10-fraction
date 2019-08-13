@@ -45,13 +45,12 @@ public class AdditionTest {
     }
 
     @Test
-    public void add_fraction_to_otherFraction_sum_their_numerators() {
-        Fraction two = new Fraction(2);
-        Fraction three = new Fraction(3);
-        Fraction expectedResult = new Fraction(5);
+    public void add_fractionA_to_fractionB_should_sum_their_numerators() {
+        int numeratorA = 2;
+        int numeratorB = 3;
+        int sumOfNumerator = numeratorA + numeratorB;
 
-        Fraction additionResult = two.add(three);
-
-        assertEquals(expectedResult, additionResult);
+        assertEquals(new Fraction(sumOfNumerator),
+                new Fraction(numeratorA).add(new Fraction(numeratorB)));
     }
 }
