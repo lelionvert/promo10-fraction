@@ -15,7 +15,7 @@ public class AdditionTest {
     }
 
     @Test
-    public void neutral_element_added_to_itself_should_return_itself() {
+    public void add_neutral_element_to_itself_should_return_itself() {
         Fraction neutralElement = new Fraction(Fraction.NEUTRAL_ELEMENT);
 
         Fraction additionResult = neutralElement.add(neutralElement);
@@ -34,7 +34,7 @@ public class AdditionTest {
     }
 
     @Test
-    public void neutral_element_added_to_neutral_element_should_return_new_neutral_element() {
+    public void add_neutral_element_to_new_neutral_element_should_return_new_neutral_element() {
         Fraction neutralElement2 = new Fraction(Fraction.NEUTRAL_ELEMENT);
         Fraction neutralElement1 = new Fraction(Fraction.NEUTRAL_ELEMENT);
         Fraction expectedResult = new Fraction(Fraction.NEUTRAL_ELEMENT);
