@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class AdditionTest {
 
@@ -37,5 +38,11 @@ public class AdditionTest {
 
         assertEquals(Fraction.of(sumOfNumerator),
                 Fraction.of(numeratorA).add(Fraction.of(numeratorB)));
+    }
+
+    @Test
+    public void commutativity_of_addition() {
+        assertTrue(Fraction.of(1).add(Fraction.of(2))
+                .equals(Fraction.of(2).add(Fraction.of(1))));
     }
 }
