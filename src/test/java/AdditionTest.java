@@ -32,4 +32,15 @@ public class AdditionTest {
 
         assertEquals(anyFraction, additionResult);
     }
+
+    @Test
+    public void neutral_element_added_to_neutral_element_should_return_new_neutral_element() {
+        Fraction neutralElement2 = new Fraction(Fraction.NEUTRAL_ELEMENT);
+        Fraction neutralElement1 = new Fraction(Fraction.NEUTRAL_ELEMENT);
+        Fraction expectedResult = new Fraction(Fraction.NEUTRAL_ELEMENT);
+
+        Fraction additionResult = neutralElement1.add(neutralElement2);
+
+        assertEquals(expectedResult, additionResult);
+    }
 }
