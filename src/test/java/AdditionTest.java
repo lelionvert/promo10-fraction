@@ -7,28 +7,24 @@ public class AdditionTest {
     @Test
     public void add_neutral_element_to_any_fraction_should_return_this_fraction() {
         Fraction anyFraction = Fraction.of(1);
-        Fraction neutralElement = Fraction.zero();
 
-        Fraction additionResult = anyFraction.add(neutralElement);
+        Fraction additionResult = anyFraction.add(Fraction.zero());
 
         assertEquals(anyFraction, additionResult);
     }
 
     @Test
     public void add_neutral_element_to_itself_should_return_itself() {
-        Fraction neutralElement = Fraction.zero();
+        Fraction additionResult = Fraction.zero().add(Fraction.zero());
 
-        Fraction additionResult = neutralElement.add(neutralElement);
-
-        assertEquals(neutralElement, additionResult);
+        assertEquals(Fraction.zero(), additionResult);
     }
 
     @Test
     public void add_anyFraction_to_neutral_element_should_return_anyFraction() {
-        Fraction neutralElement = Fraction.zero();
         Fraction anyFraction = Fraction.of(1);
 
-        Fraction additionResult = neutralElement.add(anyFraction);
+        Fraction additionResult = Fraction.zero().add(anyFraction);
 
         assertEquals(anyFraction, additionResult);
     }
