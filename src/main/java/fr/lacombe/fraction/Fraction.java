@@ -1,3 +1,5 @@
+package fr.lacombe.fraction;
+
 import java.util.Objects;
 
 public class Fraction {

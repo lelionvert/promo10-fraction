@@ -1,3 +1,5 @@
+package fr.lacombe.fraction;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
