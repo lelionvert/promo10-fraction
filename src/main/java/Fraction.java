@@ -8,6 +8,10 @@ public class Fraction {
         this.numerator = numerator;
     }
 
+    public static Fraction zero() {
+        return new Fraction(NEUTRAL_ELEMENT);
+    }
+
     public Fraction add(Fraction other) {
         if (NEUTRAL_ELEMENT == other.numerator) {
             return this;
