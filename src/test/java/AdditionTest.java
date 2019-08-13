@@ -34,17 +34,6 @@ public class AdditionTest {
     }
 
     @Test
-    public void add_neutral_element_to_new_neutral_element_should_return_new_neutral_element() {
-        Fraction neutralElement2 = Fraction.zero();
-        Fraction neutralElement1 = Fraction.zero();
-        Fraction expectedResult = Fraction.zero();
-
-        Fraction additionResult = neutralElement1.add(neutralElement2);
-
-        assertEquals(expectedResult, additionResult);
-    }
-
-    @Test
     public void add_fractionA_to_fractionB_should_sum_their_numerators() {
         int numeratorA = 2;
         int numeratorB = 3;
