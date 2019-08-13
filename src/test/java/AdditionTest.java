@@ -6,7 +6,7 @@ public class AdditionTest {
 
     @Test
     public void add_neutral_element_to_any_fraction_should_return_this_fraction() {
-        Fraction anyFraction = new Fraction(1);
+        Fraction anyFraction = Fraction.of(1);
         Fraction neutralElement = Fraction.zero();
 
         Fraction additionResult = anyFraction.add(neutralElement);
@@ -26,7 +26,7 @@ public class AdditionTest {
     @Test
     public void add_anyFraction_to_neutral_element_should_return_anyFraction() {
         Fraction neutralElement = Fraction.zero();
-        Fraction anyFraction = new Fraction(1);
+        Fraction anyFraction = Fraction.of(1);
 
         Fraction additionResult = neutralElement.add(anyFraction);
 
@@ -39,7 +39,7 @@ public class AdditionTest {
         int numeratorB = 3;
         int sumOfNumerator = numeratorA + numeratorB;
 
-        assertEquals(new Fraction(sumOfNumerator),
-                new Fraction(numeratorA).add(new Fraction(numeratorB)));
+        assertEquals(Fraction.of(sumOfNumerator),
+                Fraction.of(numeratorA).add(Fraction.of(numeratorB)));
     }
 }

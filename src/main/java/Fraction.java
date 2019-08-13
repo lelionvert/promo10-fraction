@@ -4,12 +4,16 @@ public class Fraction {
     private static final int ZERO = 0;
     private final int numerator;
 
-    public Fraction(int numerator) {
+    private Fraction(int numerator) {
         this.numerator = numerator;
     }
 
     public static Fraction zero() {
         return new Fraction(ZERO);
+    }
+
+    public static Fraction of(int numerator) {
+        return new Fraction(numerator);
     }
 
     public Fraction add(Fraction other) {
