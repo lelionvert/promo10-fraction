@@ -2,8 +2,7 @@ package fr.lacombe.fraction;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class AdditionTest {
 
@@ -48,5 +47,11 @@ public class AdditionTest {
         Fraction AAddedToB = Fraction.integer(2).add(Fraction.integer(1));
 
         assertTrue(BAddedToA.equals(AAddedToB));
+    }
+
+    @Test
+    public void add_fraction_to_neutral_element_should_return_fraction() {
+        assertNotEquals(Fraction.of(1, 4),
+                Fraction.of(1, 2).add(Fraction.zero()));
     }
 }

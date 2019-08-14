@@ -6,9 +6,11 @@ public class Fraction {
     private static final int ZERO = 0;
     public static final int DENOMINATOR_OF_INTEGER = 1;
     private final int numerator;
+    private final int denominator;
 
     private Fraction(int numerator, int denominator) {
         this.numerator = numerator;
+        this.denominator = denominator;
     }
 
     public static Fraction zero() {
@@ -17,6 +19,10 @@ public class Fraction {
 
     public static Fraction integer(int value) {
         return new Fraction(value, DENOMINATOR_OF_INTEGER);
+    }
+
+    public static Fraction of(int i, int i1) {
+        return new Fraction(i, i1);
     }
 
     public Fraction add(Fraction other) {
@@ -28,7 +34,7 @@ public class Fraction {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fraction fraction = (Fraction) o;
-        return numerator == fraction.numerator;
+        return numerator == fraction.numerator && denominator == fraction.denominator;
     }
 
     @Override
