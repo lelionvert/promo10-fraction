@@ -33,9 +33,17 @@ public class Fraction {
         int denominator = this.denominator * other.denominator;
 
         if (numerator % 5 == 0 && denominator % 5 == 0) {
-            return new Fraction(numerator / 25, denominator / 25);
+            return simplify(Fraction.of(numerator, denominator));
         }
         return new Fraction(numerator, denominator);
+    }
+
+    private Fraction simplify(Fraction result) {
+        return new Fraction(result.numerator / gcd(), result.denominator / gcd());
+    }
+
+    private int gcd() {
+        return 25;
     }
 
     private boolean hasSameDenominatorAs(Fraction other) {
