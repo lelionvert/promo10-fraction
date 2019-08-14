@@ -3,12 +3,19 @@ package fr.lacombe.fraction;
 import static java.lang.Integer.min;
 
 public class Gcd {
+
+    public static final int MINIMUM_GCD = 1;
+
     public static int compute(int a, int b) {
-        for (int i = min(a, b); i > 1; i--) {
-            if (a % i == 0 && b % i == 0) {
-                return i;
+        for (int candidateGcd = min(a, b); candidateGcd > MINIMUM_GCD; candidateGcd--) {
+            if (isMultipleOf(a, candidateGcd) && isMultipleOf(b, candidateGcd)) {
+                return candidateGcd;
             }
         }
-        return 1;
+        return MINIMUM_GCD;
+    }
+
+    private static boolean isMultipleOf(int number, int multiplier) {
+        return number % multiplier == 0;
     }
 }
