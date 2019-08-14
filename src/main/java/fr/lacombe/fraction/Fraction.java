@@ -26,28 +26,18 @@ public class Fraction {
     }
 
     public Fraction add(Fraction other) {
-        if (this.hasSameDenominatorAs(other)) {
-            return new Fraction(this.numerator + other.numerator, this.denominator);
-        }
         int numerator = this.numerator * other.denominator + other.numerator * this.denominator;
         int denominator = this.denominator * other.denominator;
 
-        if (numerator % 5 == 0 && denominator % 5 == 0) {
-            return simplify(Fraction.of(numerator, denominator));
-        }
-        return new Fraction(numerator, denominator);
+        return simplify(Fraction.of(numerator, denominator));
     }
 
     private Fraction simplify(Fraction result) {
-        return new Fraction(result.numerator / gcd(), result.denominator / gcd());
+        return new Fraction(result.numerator / gcd(result), result.denominator / gcd(result));
     }
 
-    private int gcd() {
-        return 25;
-    }
-
-    private boolean hasSameDenominatorAs(Fraction other) {
-        return this.denominator == other.denominator;
+    private int gcd(Fraction fraction) {
+        return Gcd.compute(fraction.numerator, fraction.denominator);
     }
 
     @Override

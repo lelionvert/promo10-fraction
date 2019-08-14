@@ -14,4 +14,9 @@ public class GcdTest {
     public void compute_gcd_triangulation() {
         assertEquals(4, Gcd.compute(12, 4));
     }
+
+    @Test
+    public void compute_gcd_with_same_numbers() {
+        assertEquals(2, Gcd.compute(2, 2));
+    }
 }

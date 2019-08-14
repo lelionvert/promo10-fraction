@@ -72,4 +72,11 @@ public class AdditionTest {
         assertEquals(Fraction.of(4, 3),
                 Fraction.of(4, 5).add(Fraction.of(8, 15)));
     }
+
+    @Test
+    public void add_fractions_with_different_denominator_and_simplification_triangulation() {
+        assertEquals(Fraction.integer(1),
+                Fraction.of(1, 2).add(Fraction.of(1, 2)));
+    }
 }
+
