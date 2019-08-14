@@ -33,11 +33,8 @@ public class Fraction {
     }
 
     private Fraction simplify(Fraction result) {
-        return new Fraction(result.numerator / gcd(result), result.denominator / gcd(result));
-    }
-
-    private int gcd(Fraction fraction) {
-        return Gcd.compute(fraction.numerator, fraction.denominator);
+        int gcd = Gcd.compute(result.numerator, result.denominator);
+        return new Fraction(result.numerator / gcd, result.denominator / gcd);
     }
 
     @Override
