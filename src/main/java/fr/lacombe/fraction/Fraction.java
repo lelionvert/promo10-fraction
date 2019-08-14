@@ -21,8 +21,8 @@ public class Fraction {
         return new Fraction(value, DENOMINATOR_OF_INTEGER);
     }
 
-    public static Fraction of(int i, int i1) {
-        return new Fraction(i, i1);
+    public static Fraction of(int numerator, int denominator) {
+        return new Fraction(numerator, denominator);
     }
 
     public Fraction add(Fraction other) {

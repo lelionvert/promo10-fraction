@@ -50,7 +50,7 @@ public class AdditionTest {
     }
 
     @Test
-    public void add_fraction_to_neutral_element_should_return_fraction() {
+    public void add_fraction_to_neutral_element_should_not_return_another_fraction() {
         assertNotEquals(Fraction.of(1, 4),
                 Fraction.of(1, 2).add(Fraction.zero()));
     }
