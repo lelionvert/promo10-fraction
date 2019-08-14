@@ -9,7 +9,7 @@ public class AdditionTest {
 
     @Test
     public void add_neutral_element_to_any_fraction_should_return_this_fraction() {
-        Fraction anyFraction = Fraction.of(1);
+        Fraction anyFraction = Fraction.integer(1);
 
         Fraction additionResult = anyFraction.add(Fraction.zero());
 
@@ -25,7 +25,7 @@ public class AdditionTest {
 
     @Test
     public void add_anyFraction_to_neutral_element_should_return_anyFraction() {
-        Fraction anyFraction = Fraction.of(1);
+        Fraction anyFraction = Fraction.integer(1);
 
         Fraction additionResult = Fraction.zero().add(anyFraction);
 
@@ -38,14 +38,14 @@ public class AdditionTest {
         int numeratorB = 3;
         int sumOfNumerator = numeratorA + numeratorB;
 
-        assertEquals(Fraction.of(sumOfNumerator),
-                Fraction.of(numeratorA).add(Fraction.of(numeratorB)));
+        assertEquals(Fraction.integer(sumOfNumerator),
+                Fraction.integer(numeratorA).add(Fraction.integer(numeratorB)));
     }
 
     @Test
     public void add_should_be_commutative() {
-        Fraction BAddedToA = Fraction.of(1).add(Fraction.of(2));
-        Fraction AAddedToB = Fraction.of(2).add(Fraction.of(1));
+        Fraction BAddedToA = Fraction.integer(1).add(Fraction.integer(2));
+        Fraction AAddedToB = Fraction.integer(2).add(Fraction.integer(1));
 
         assertTrue(BAddedToA.equals(AAddedToB));
     }
