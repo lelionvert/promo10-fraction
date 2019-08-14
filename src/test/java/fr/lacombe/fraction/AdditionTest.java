@@ -54,4 +54,10 @@ public class AdditionTest {
         assertNotEquals(Fraction.of(1, 4),
                 Fraction.of(1, 2).add(Fraction.zero()));
     }
+
+    @Test
+    public void add_fractions_with_same_denominator_should_sum_only_their_numerators() {
+        assertEquals(Fraction.of(5,2),
+                Fraction.of(1,2).add(Fraction.of(4,2)));
+    }
 }

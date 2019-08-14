@@ -26,7 +26,7 @@ public class Fraction {
     }
 
     public Fraction add(Fraction other) {
-        return new Fraction(this.numerator + other.numerator, 1);
+        return new Fraction(this.numerator + other.numerator, this.denominator);
     }
 
     @Override
