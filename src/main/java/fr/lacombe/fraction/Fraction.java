@@ -26,12 +26,16 @@ public class Fraction {
     }
 
     public Fraction add(Fraction other) {
-        if (this.denominator != other.denominator) {
-            int denominator = this.denominator * other.denominator;
-            int numerator = this.numerator * other.denominator + other.numerator * this.denominator;
-            return new Fraction(numerator, denominator);
+        if (this.hasSameDenominatorAs(other)) {
+            return new Fraction(this.numerator + other.numerator, this.denominator);
         }
-        return new Fraction(this.numerator + other.numerator, this.denominator);
+        int numerator = this.numerator * other.denominator + other.numerator * this.denominator;
+        int denominator = this.denominator * other.denominator;
+        return new Fraction(numerator, denominator);
+    }
+
+    private boolean hasSameDenominatorAs(Fraction other) {
+        return this.denominator == other.denominator;
     }
 
     @Override
