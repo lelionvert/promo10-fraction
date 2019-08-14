@@ -60,4 +60,10 @@ public class AdditionTest {
         assertEquals(Fraction.of(5,2),
                 Fraction.of(1,2).add(Fraction.of(4,2)));
     }
+
+    @Test
+    public void add_fractions_with_different_denominator_that_should_be_irreductible() {
+        assertEquals(Fraction.of(5, 6),
+                Fraction.of(1, 3).add(Fraction.of(1, 2)));
+    }
 }
