@@ -7,6 +7,6 @@ import static org.junit.Assert.assertEquals;
 public class GcdTest {
     @Test
     public void compute_gcd() {
-        assertEquals(25, Gcd.of(100, 75));
+        assertEquals(25, Gcd.compute(100, 75));
     }
 }

@@ -1,7 +1,7 @@
 package fr.lacombe.fraction;
 
 public class Gcd {
-    public static int of(int i, int i1) {
+    public static int compute(int a, int b) {
         return 25;
     }
 }
