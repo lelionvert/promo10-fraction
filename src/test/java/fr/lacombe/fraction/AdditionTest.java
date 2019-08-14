@@ -66,4 +66,10 @@ public class AdditionTest {
         assertEquals(Fraction.of(5, 6),
                 Fraction.of(1, 3).add(Fraction.of(1, 2)));
     }
+
+    @Test
+    public void add_fractions_with_different_denominator_and_simplification() {
+        assertEquals(Fraction.of(4, 3),
+                Fraction.of(4, 5).add(Fraction.of(8, 15)));
+    }
 }

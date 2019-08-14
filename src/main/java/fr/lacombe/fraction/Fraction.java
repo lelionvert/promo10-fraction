@@ -31,6 +31,10 @@ public class Fraction {
         }
         int numerator = this.numerator * other.denominator + other.numerator * this.denominator;
         int denominator = this.denominator * other.denominator;
+
+        if (numerator % 5 == 0 && denominator % 5 == 0) {
+            return new Fraction(numerator / 25, denominator / 25);
+        }
         return new Fraction(numerator, denominator);
     }
 
